@@ -1,0 +1,44 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFrameworks>net48;net8.0-windows</TargetFrameworks>
+	</PropertyGroup>
+
+	<ItemGroup Condition=" '$(TargetFramework)' == 'net8.0-windows' ">
+		<FrameworkReference Include="Microsoft.WindowsDesktop.App" />
+		<Reference Include="accoremgd">
+			<HintPath>F:\ObjectARX 2025\inc\AcCoreMgd.dll</HintPath>
+			<Private>False</Private>
+		</Reference>
+		<Reference Include="Acdbmgd">
+			<HintPath>F:\ObjectARX 2025\inc\AcDbMgd.dll</HintPath>
+			<Private>False</Private>
+		</Reference>
+		<Reference Include="acmgd">
+			<HintPath>F:\ObjectARX 2025\inc\AcMgd.dll</HintPath>
+			<Private>False</Private>
+		</Reference>
+		<Reference Include="QRCoder">
+		  <HintPath>C:\Users\chant\.nuget\packages\qrcoder\1.6.0\lib\net6.0-windows7.0\QRCoder.dll</HintPath>
+		</Reference>
+	</ItemGroup>
+
+	<ItemGroup Condition=" '$(TargetFramework)' == 'net48' ">
+		<Reference Include="accoremgd">
+			<HintPath>F:\ObjectARX 2024\inc\AcCoreMgd.dll</HintPath>
+			<Private>False</Private>
+		</Reference>
+		<Reference Include="Acdbmgd">
+			<HintPath>F:\ObjectARX 2024\inc\AcDbMgd.dll</HintPath>
+			<Private>False</Private>
+		</Reference>
+		<Reference Include="acmgd">
+			<HintPath>F:\ObjectARX 2024\inc\AcMgd.dll</HintPath>
+			<Private>False</Private>
+		</Reference>
+		<Reference Include="QRCoder">
+			<HintPath>C:\Users\chant\.nuget\packages\qrcoder\1.6.0\lib\net40\QRCoder.dll</HintPath>
+		</Reference>
+	</ItemGroup>
+
+</Project>
