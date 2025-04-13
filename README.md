@@ -20,7 +20,7 @@ var hatch = coder.GetHatch();
 #### Create a block definition
 The block definition (BlockTableRecord) is added to the block table of the supplied database. It contains a background Solid and a Hatch representing the QRCode and possibly a constant attribute definition with the encoded text.
 
-Example of a block named "QRCode_test" with a dark red hatch: 
+Example of a block named "QRCode_test" with a dark red hatch and a constant attribute: 
 ```c#
 var coder = new BlockQRCoder("The text which should be encoded.")
 {
