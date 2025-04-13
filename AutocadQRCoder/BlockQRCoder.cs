@@ -68,10 +68,14 @@ namespace AutocadQRCoder
             int requestedVersion = -1)
         {
             this.plainText = plainText;
-            var ecc = (QRCodeGenerator.ECCLevel)eccLevel;
-            var eci = (QRCodeGenerator.EciMode)eciMode;
             using (var qrGenerator = new QRCodeGenerator())
-            using (QRCodeData qrCodeData = qrGenerator.CreateQrCode(plainText, ecc, forceUtf8, utf8BOM, eci, requestedVersion))
+            using (QRCodeData qrCodeData = qrGenerator.CreateQrCode(
+                plainText,
+                (QRCodeGenerator.ECCLevel)eccLevel, 
+                forceUtf8, 
+                utf8BOM,
+                (QRCodeGenerator.EciMode)eciMode, 
+                requestedVersion))
             {
                 matrix = qrCodeData.ModuleMatrix;
                 size = matrix.Count;
