@@ -1,7 +1,7 @@
 # AutocadQRCoder
 AutocadQRCoder uses [QRCoder library](https://github.com/codebude/QRCoder) to enable the creation of AutoCAD entities (block or hatch) figuring QR Codes.
 ### Usage
-Checkout and compile this repository or [download](https://gilecad.azurewebsites.net/Resources/AutocadQRCoder.zip) the assemblies.
+Clone or fork this repository or [download](https://gilecad.azurewebsites.net/Resources/AutocadQRCoder.zip) the assemblies.
 
 In an AutoCAD plugin project, reference the AutocadQRCoder.dll in the folder corresponding to the targeted AutoCAD version (Release\net48 for AutoCAD up to 2024 or Release\net8.0-windows for AutoCAD 2025 and later).
 
