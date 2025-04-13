@@ -5,8 +5,6 @@ Clone or fork this repository or [download](https://gilecad.azurewebsites.net/Re
 
 In an AutoCAD plugin project, reference the AutocadQRCoder.dll in the folder corresponding to the targeted AutoCAD version (Release\net48 for AutoCAD up to 2024 or Release\net8.0-windows for AutoCAD 2025 and later).
 
-More informations about the parameters of the BlockQRCoder constructor in the [QRCoder wiki](https://github.com/codebude/QRCoder/wiki/How-to-use-QRCoder#3-basic-usage).
-
 #### Create a Solid background and a Hatch
 The caller is responsible to add the newly created hatch and solid entities to a database or dispose them.
 
@@ -29,3 +27,4 @@ var coder = new BlockQRCoder("The text which should be encoded.")
 ObjectId btrId = coder.CreateBlock(db, "QRCode_test", true);
 ```
 
+The parameters of the BlockQRCoder constructor are the same as the QRCoder.QRCodeGenerator.CreateQRCode. You can find more informations about these parameters in the [QRCoder wiki](https://github.com/codebude/QRCoder/wiki/How-to-use-QRCoder#3-basic-usage).
