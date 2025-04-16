@@ -57,7 +57,7 @@
             // 
             this.buttonOK.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.buttonOK.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.buttonOK.Location = new System.Drawing.Point(155, 206);
+            this.buttonOK.Location = new System.Drawing.Point(140, 226);
             this.buttonOK.Name = "buttonOK";
             this.buttonOK.Size = new System.Drawing.Size(75, 23);
             this.buttonOK.TabIndex = 0;
@@ -68,7 +68,7 @@
             // 
             this.buttonCancel.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.buttonCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.buttonCancel.Location = new System.Drawing.Point(254, 206);
+            this.buttonCancel.Location = new System.Drawing.Point(239, 226);
             this.buttonCancel.Name = "buttonCancel";
             this.buttonCancel.Size = new System.Drawing.Size(75, 23);
             this.buttonCancel.TabIndex = 1;
@@ -86,11 +86,14 @@
             // 
             // textBoxPlainText
             // 
-            this.textBoxPlainText.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.textBoxPlainText.AcceptsReturn = true;
+            this.textBoxPlainText.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxPlainText.Location = new System.Drawing.Point(13, 32);
+            this.textBoxPlainText.Multiline = true;
             this.textBoxPlainText.Name = "textBoxPlainText";
-            this.textBoxPlainText.Size = new System.Drawing.Size(459, 20);
+            this.textBoxPlainText.Size = new System.Drawing.Size(429, 40);
             this.textBoxPlainText.TabIndex = 0;
             // 
             // comboBoxEccLevel
@@ -134,6 +137,7 @@
             // 
             // groupBoxEncoding
             // 
+            this.groupBoxEncoding.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.groupBoxEncoding.Controls.Add(this.comboBoxRequestVersion);
             this.groupBoxEncoding.Controls.Add(this.labelRequestVersion);
             this.groupBoxEncoding.Controls.Add(this.comboBoxECI);
@@ -142,7 +146,7 @@
             this.groupBoxEncoding.Controls.Add(this.checkBoxUtf8Bom);
             this.groupBoxEncoding.Controls.Add(this.comboBoxEccLevel);
             this.groupBoxEncoding.Controls.Add(this.checkBoxUtf8);
-            this.groupBoxEncoding.Location = new System.Drawing.Point(12, 61);
+            this.groupBoxEncoding.Location = new System.Drawing.Point(12, 81);
             this.groupBoxEncoding.Name = "groupBoxEncoding";
             this.groupBoxEncoding.Size = new System.Drawing.Size(275, 133);
             this.groupBoxEncoding.TabIndex = 8;
@@ -231,7 +235,7 @@
             // 
             // groupBoxBlock
             // 
-            this.groupBoxBlock.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.groupBoxBlock.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBoxBlock.Controls.Add(this.numericBoxScale);
             this.groupBoxBlock.Controls.Add(this.checkBoxAttribute);
@@ -240,18 +244,19 @@
             this.groupBoxBlock.Controls.Add(this.comboBoxLayer);
             this.groupBoxBlock.Controls.Add(this.textBoxBlockName);
             this.groupBoxBlock.Controls.Add(this.labelBlockName);
-            this.groupBoxBlock.Location = new System.Drawing.Point(293, 61);
+            this.groupBoxBlock.Location = new System.Drawing.Point(293, 81);
             this.groupBoxBlock.Name = "groupBoxBlock";
-            this.groupBoxBlock.Size = new System.Drawing.Size(179, 133);
+            this.groupBoxBlock.Size = new System.Drawing.Size(149, 133);
             this.groupBoxBlock.TabIndex = 9;
             this.groupBoxBlock.TabStop = false;
             this.groupBoxBlock.Text = "Block";
             // 
             // numericBoxScale
             // 
+            this.numericBoxScale.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.numericBoxScale.DecimalPlaces = 0;
             this.numericBoxScale.ErrorMsg = "Incorrect number";
-            this.numericBoxScale.Location = new System.Drawing.Point(105, 76);
+            this.numericBoxScale.Location = new System.Drawing.Point(75, 76);
             this.numericBoxScale.Maximum = 1.7976931348623157E+308D;
             this.numericBoxScale.Minimum = 1E-16D;
             this.numericBoxScale.Name = "numericBoxScale";
@@ -298,7 +303,7 @@
             this.comboBoxLayer.FormattingEnabled = true;
             this.comboBoxLayer.Location = new System.Drawing.Point(48, 46);
             this.comboBoxLayer.Name = "comboBoxLayer";
-            this.comboBoxLayer.Size = new System.Drawing.Size(125, 21);
+            this.comboBoxLayer.Size = new System.Drawing.Size(95, 21);
             this.comboBoxLayer.TabIndex = 2;
             // 
             // textBoxBlockName
@@ -307,7 +312,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxBlockName.Location = new System.Drawing.Point(48, 20);
             this.textBoxBlockName.Name = "textBoxBlockName";
-            this.textBoxBlockName.Size = new System.Drawing.Size(125, 20);
+            this.textBoxBlockName.Size = new System.Drawing.Size(95, 20);
             this.textBoxBlockName.TabIndex = 1;
             this.textBoxBlockName.Text = "*U";
             // 
@@ -326,7 +331,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.buttonCancel;
-            this.ClientSize = new System.Drawing.Size(484, 241);
+            this.ClientSize = new System.Drawing.Size(454, 261);
             this.Controls.Add(this.groupBoxBlock);
             this.Controls.Add(this.groupBoxEncoding);
             this.Controls.Add(this.textBoxPlainText);

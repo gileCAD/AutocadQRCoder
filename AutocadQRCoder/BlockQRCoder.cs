@@ -120,12 +120,13 @@ namespace AutocadQRCoder
 
                 if (plainTextAsAttribute)
                 {
-                    var attDef = new AttributeDefinition(Point3d.Origin, plainText, "TEXT", "", db.Textstyle)
+                    var attDef = new AttributeDefinition(Point3d.Origin, plainText.Replace("\r\n", "\\P"), "TEXT", "", db.Textstyle)
                     {
+                        IsMTextAttributeDefinition = true,
                         Constant = true,
                         Height = 2.5,
-                        Justify = AttachmentPoint.BaseCenter,
-                        AlignmentPoint = new Point3d(size / 2.0, -5.0, 0.0)
+                        Justify = AttachmentPoint.TopCenter,
+                        AlignmentPoint = new Point3d(size / 2.0, -2.0, 0.0)
                     };
                     btr.AppendEntity(attDef);
                     tr.AddNewlyCreatedDBObject(attDef, true);

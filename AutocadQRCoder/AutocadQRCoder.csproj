@@ -19,7 +19,7 @@
 			<Private>False</Private>
 		</Reference>
 		<Reference Include="QRCoder">
-		  <HintPath>C:\Users\xxxx\.nuget\packages\qrcoder\1.6.0\lib\net6.0-windows7.0\QRCoder.dll</HintPath>
+		  <HintPath>C:\Users\chant\.nuget\packages\qrcoder\1.6.0\lib\net6.0-windows7.0\QRCoder.dll</HintPath>
 		</Reference>
 	</ItemGroup>
 
@@ -37,7 +37,7 @@
 			<Private>False</Private>
 		</Reference>
 		<Reference Include="QRCoder">
-			<HintPath>C:\Users\xxxx\.nuget\packages\qrcoder\1.6.0\lib\net40\QRCoder.dll</HintPath>
+			<HintPath>C:\Users\chant\.nuget\packages\qrcoder\1.6.0\lib\net40\QRCoder.dll</HintPath>
 		</Reference>
 	</ItemGroup>
 
