@@ -30,4 +30,6 @@ ObjectId btrId = coder.CreateBlock(db, "QRCode_test", true);
 The parameters of the BlockQRCoder constructor are the same as the QRCoder.QRCodeGenerator.CreateQRCode. You can find more informations about these parameters in the [QRCoder wiki](https://github.com/codebude/QRCoder/wiki/How-to-use-QRCoder#3-basic-usage).
 
 ## InsertQRCodeBlock
-An example of AutoCAD command to insert a QR Code block. A dialog box allows to set encoding parameters and block properties. 
+An example of AutoCAD command to insert a QR Code block. A dialog box allows to set encoding parameters and block properties.  
+  
+![Screenshot of the QRCODEINSERT command dialog box.](https://gilecad.azurewebsites.net/DotNet/QR_Code_Block_Dialog.png)
