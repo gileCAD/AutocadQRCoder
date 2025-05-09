@@ -2,7 +2,11 @@
 
 using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Windows.Forms;
+
+using AcadColor = Autodesk.AutoCAD.Colors.Color;
+using AcadWindows = Autodesk.AutoCAD.Windows;
 
 namespace InsertQRCodeBlock
 {
@@ -30,6 +34,10 @@ namespace InsertQRCodeBlock
 
         public bool AddAttribute => checkBoxAttribute.Checked;
 
+        public AcadColor BackgroundColor { get; private set; } = AcadColor.FromRgb(255, 255, 255);
+
+        public AcadColor ForegroundColor { get; private set; } = AcadColor.FromRgb(0, 0, 0);
+
         public QRCodeBlockDialog(List<string> layers, string layer)
         {
             InitializeComponent();
@@ -40,6 +48,39 @@ namespace InsertQRCodeBlock
             comboBoxRequestVersion.SelectedItem = "Auto";
             comboBoxLayer.DataSource = layers;
             comboBoxLayer.SelectedItem = layer;
+        }
+
+        private void ButtonBackground_Click(object sender, EventArgs e)
+        {
+            SetColor(true);
+        }
+
+        private void buttonForeground_Click(object sender, EventArgs e)
+        {
+            SetColor(false);
+        }
+
+        private void SetColor(bool isBackground)
+        {
+            var colorDialog = new AcadWindows.ColorDialog()
+            {
+                Color = isBackground ? BackgroundColor : ForegroundColor,
+                IncludeByBlockByLayer = false
+            };
+            if (colorDialog.ShowDialog() == DialogResult.OK)
+            {
+                AcadColor color = colorDialog.Color;
+                if (isBackground)
+                {
+                    pictureBoxBackground.BackColor = color.ColorValue;
+                    BackgroundColor = color;
+                }
+                else
+                {
+                    pictureBoxForeground.BackColor = color.ColorValue;
+                    ForegroundColor = color;
+                }
+            }
         }
     }
 }
