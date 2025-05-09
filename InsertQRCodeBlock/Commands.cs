@@ -45,7 +45,11 @@ namespace InsertQRCodeBlock
                                 dialog.ForceUtf8 | dialog.ForceUtf8Bom,
                                 dialog.ForceUtf8Bom,
                                 dialog.EciMode,
-                                dialog.RequestVerion);
+                                dialog.RequestVerion)
+                            {
+                                BackgroundColor = dialog.BackgroundColor,
+                                ForegroundColor = dialog.ForegroundColor
+                            };
                             var btrId = coder.CreateBlock(db, dialog.BlockName, dialog.AddAttribute);
                             using (var br = new BlockReference(Point3d.Origin, btrId)
                             {

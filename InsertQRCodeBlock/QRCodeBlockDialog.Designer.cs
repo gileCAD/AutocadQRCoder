@@ -42,6 +42,10 @@
             this.comboBoxECI = new System.Windows.Forms.ComboBox();
             this.labelECI = new System.Windows.Forms.Label();
             this.groupBoxBlock = new System.Windows.Forms.GroupBox();
+            this.pictureBoxForeground = new System.Windows.Forms.PictureBox();
+            this.pictureBoxBackground = new System.Windows.Forms.PictureBox();
+            this.buttonForeground = new System.Windows.Forms.Button();
+            this.buttonBackground = new System.Windows.Forms.Button();
             this.numericBoxScale = new InsertQRCodeBlock.NumericBox();
             this.checkBoxAttribute = new System.Windows.Forms.CheckBox();
             this.labelScale = new System.Windows.Forms.Label();
@@ -51,13 +55,15 @@
             this.labelBlockName = new System.Windows.Forms.Label();
             this.groupBoxEncoding.SuspendLayout();
             this.groupBoxBlock.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxForeground)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBackground)).BeginInit();
             this.SuspendLayout();
             // 
             // buttonOK
             // 
             this.buttonOK.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.buttonOK.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.buttonOK.Location = new System.Drawing.Point(140, 226);
+            this.buttonOK.Location = new System.Drawing.Point(66, 246);
             this.buttonOK.Name = "buttonOK";
             this.buttonOK.Size = new System.Drawing.Size(75, 23);
             this.buttonOK.TabIndex = 0;
@@ -68,7 +74,7 @@
             // 
             this.buttonCancel.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.buttonCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.buttonCancel.Location = new System.Drawing.Point(239, 226);
+            this.buttonCancel.Location = new System.Drawing.Point(165, 246);
             this.buttonCancel.Name = "buttonCancel";
             this.buttonCancel.Size = new System.Drawing.Size(75, 23);
             this.buttonCancel.TabIndex = 1;
@@ -93,7 +99,7 @@
             this.textBoxPlainText.Location = new System.Drawing.Point(13, 32);
             this.textBoxPlainText.Multiline = true;
             this.textBoxPlainText.Name = "textBoxPlainText";
-            this.textBoxPlainText.Size = new System.Drawing.Size(429, 40);
+            this.textBoxPlainText.Size = new System.Drawing.Size(429, 37);
             this.textBoxPlainText.TabIndex = 0;
             // 
             // comboBoxEccLevel
@@ -146,7 +152,7 @@
             this.groupBoxEncoding.Controls.Add(this.checkBoxUtf8Bom);
             this.groupBoxEncoding.Controls.Add(this.comboBoxEccLevel);
             this.groupBoxEncoding.Controls.Add(this.checkBoxUtf8);
-            this.groupBoxEncoding.Location = new System.Drawing.Point(12, 81);
+            this.groupBoxEncoding.Location = new System.Drawing.Point(12, 78);
             this.groupBoxEncoding.Name = "groupBoxEncoding";
             this.groupBoxEncoding.Size = new System.Drawing.Size(275, 133);
             this.groupBoxEncoding.TabIndex = 8;
@@ -237,6 +243,10 @@
             // 
             this.groupBoxBlock.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBoxBlock.Controls.Add(this.pictureBoxForeground);
+            this.groupBoxBlock.Controls.Add(this.pictureBoxBackground);
+            this.groupBoxBlock.Controls.Add(this.buttonForeground);
+            this.groupBoxBlock.Controls.Add(this.buttonBackground);
             this.groupBoxBlock.Controls.Add(this.numericBoxScale);
             this.groupBoxBlock.Controls.Add(this.checkBoxAttribute);
             this.groupBoxBlock.Controls.Add(this.labelScale);
@@ -244,12 +254,50 @@
             this.groupBoxBlock.Controls.Add(this.comboBoxLayer);
             this.groupBoxBlock.Controls.Add(this.textBoxBlockName);
             this.groupBoxBlock.Controls.Add(this.labelBlockName);
-            this.groupBoxBlock.Location = new System.Drawing.Point(293, 81);
+            this.groupBoxBlock.Location = new System.Drawing.Point(293, 78);
             this.groupBoxBlock.Name = "groupBoxBlock";
-            this.groupBoxBlock.Size = new System.Drawing.Size(149, 133);
+            this.groupBoxBlock.Size = new System.Drawing.Size(149, 191);
             this.groupBoxBlock.TabIndex = 9;
             this.groupBoxBlock.TabStop = false;
             this.groupBoxBlock.Text = "Block";
+            // 
+            // pictureBoxForeground
+            // 
+            this.pictureBoxForeground.BackColor = System.Drawing.Color.Black;
+            this.pictureBoxForeground.Location = new System.Drawing.Point(9, 158);
+            this.pictureBoxForeground.Name = "pictureBoxForeground";
+            this.pictureBoxForeground.Size = new System.Drawing.Size(22, 22);
+            this.pictureBoxForeground.TabIndex = 11;
+            this.pictureBoxForeground.TabStop = false;
+            // 
+            // pictureBoxBackground
+            // 
+            this.pictureBoxBackground.BackColor = System.Drawing.Color.White;
+            this.pictureBoxBackground.Location = new System.Drawing.Point(9, 128);
+            this.pictureBoxBackground.Name = "pictureBoxBackground";
+            this.pictureBoxBackground.Size = new System.Drawing.Size(22, 22);
+            this.pictureBoxBackground.TabIndex = 10;
+            this.pictureBoxBackground.TabStop = false;
+            // 
+            // buttonForeground
+            // 
+            this.buttonForeground.Location = new System.Drawing.Point(37, 158);
+            this.buttonForeground.Name = "buttonForeground";
+            this.buttonForeground.Size = new System.Drawing.Size(106, 23);
+            this.buttonForeground.TabIndex = 9;
+            this.buttonForeground.Text = "Foreground";
+            this.buttonForeground.UseVisualStyleBackColor = true;
+            this.buttonForeground.Click += new System.EventHandler(this.buttonForeground_Click);
+            // 
+            // buttonBackground
+            // 
+            this.buttonBackground.Location = new System.Drawing.Point(37, 128);
+            this.buttonBackground.Name = "buttonBackground";
+            this.buttonBackground.Size = new System.Drawing.Size(106, 23);
+            this.buttonBackground.TabIndex = 8;
+            this.buttonBackground.Text = "Background";
+            this.buttonBackground.UseVisualStyleBackColor = true;
+            this.buttonBackground.Click += new System.EventHandler(this.ButtonBackground_Click);
             // 
             // numericBoxScale
             // 
@@ -331,7 +379,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.buttonCancel;
-            this.ClientSize = new System.Drawing.Size(454, 261);
+            this.ClientSize = new System.Drawing.Size(454, 281);
             this.Controls.Add(this.groupBoxBlock);
             this.Controls.Add(this.groupBoxEncoding);
             this.Controls.Add(this.textBoxPlainText);
@@ -340,7 +388,7 @@
             this.Controls.Add(this.buttonOK);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.MinimumSize = new System.Drawing.Size(470, 280);
+            this.MinimumSize = new System.Drawing.Size(470, 320);
             this.Name = "QRCodeBlockDialog";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "QR Code Block";
@@ -348,6 +396,8 @@
             this.groupBoxEncoding.PerformLayout();
             this.groupBoxBlock.ResumeLayout(false);
             this.groupBoxBlock.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxForeground)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBackground)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -376,5 +426,9 @@
         private System.Windows.Forms.Label labelScale;
         private System.Windows.Forms.CheckBox checkBoxAttribute;
         private NumericBox numericBoxScale;
+        private System.Windows.Forms.Button buttonBackground;
+        private System.Windows.Forms.PictureBox pictureBoxForeground;
+        private System.Windows.Forms.PictureBox pictureBoxBackground;
+        private System.Windows.Forms.Button buttonForeground;
     }
 }
