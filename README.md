@@ -32,4 +32,4 @@ The parameters of the BlockQRCoder constructor are the same as the QRCoder.QRCod
 ## InsertQRCodeBlock
 An example of AutoCAD command to insert a QR Code block. A dialog box allows to set encoding parameters and block properties.  
   
-![Screenshot of the QRCODEINSERT command dialog box.](https://gilecad.azurewebsites.net/DotNet/QR_Code_Block_Dialog.png)
+![Screenshot of the QRCODEINSERT command dialog box.](https://gilecad.azurewebsites.net/DotNet/QR_Code_Block_DialogBox.png)
